@@ -1,0 +1,12 @@
+=== which node npm ===
+/usr/local/bin/node
+/usr/local/bin/npm
+
+v24.16.0
+11.13.0
+
+=== npm install ===
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm error process terminated
+npm error signal SIGTERM
+npm error A complete log of this run can be found in: /var/folders/x4/4k34s5852k51_k3c0rkmr_0c0000gn/T/cursor-sandbox-cache/cb6d9f496687a83633ce69fca9a9ea90/npm/_logs/2026-05-25T15_16_25_132Z-debug-0.log

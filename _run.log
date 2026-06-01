@@ -1,0 +1,1973 @@
+/Users/sheep/Desktop/interactive-map-site
+START Mon May 25 23:24:29 CST 2026
+/usr/local/bin/node
+/usr/local/bin/npm
+v24.16.0
+11.13.0
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> interactive-map-site@1.0.0 postinstall
+> node -e "const fs=require('fs');const p='public/map/island-map.png';if(!fs.existsSync(p)&&fs.existsSync('static-legacy/assets/map/island-map.png')){fs.mkdirSync('public/map',{recursive:true});fs.copyFileSync('static-legacy/assets/map/island-map.png',p);console.log('已复制地图到 public/map');}"
+
+
+added 5 packages, removed 1 package, changed 21 packages, and audited 353 packages in 7m
+
+141 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+INSTALL_EXIT=0
+NEXT_INSTALLED=yes
+DEV_PID=10946
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> interactive-map-site@1.0.0 dev
+> next dev
+
+   Downloading swc package @next/swc-wasm-nodejs... to /Users/sheep/Library/Caches/next-swc
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' load command content extends beyond end of file), '/System/Volumes/Preboot/Cryptexes/OS/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' load command content extends beyond end of file)
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' load command content extends beyond end of file), '/System/Volumes/Preboot/Cryptexes/OS/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/sheep/Desktop/interactive-map-site/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' load command content extends beyond end of file)
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.103:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 5.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 1831ms (1363 modules)
+HTTP_CODE=200
+ GET / 200 in 2021ms
+END Mon May 25 23:31:44 CST 2026
+ ✓ Compiled in 49ms (617 modules)
+ GET / 200 in 28ms
+ GET / 200 in 42ms
+ ✓ Compiled /places/[slug] in 225ms (1361 modules)
+ GET /places/performance-arena 200 in 534ms
+ GET / 200 in 25ms
+ GET /places/wanhu-village 200 in 44ms
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+ ⨯ Failed to generate static paths for /places/[slug]:
+[Error: Jest worker encountered 2 child process exceptions, exceeding retry limit] {
+  type: 'WorkerError'
+}
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.16.0
+ GET / 200 in 16ms
+ GET / 200 in 500ms
+ GET / 200 in 45ms
+ ⨯ Module not found: Error: Can't resolve 'next-flight-client-entry-loader' in '/Users/sheep/Desktop/interactive-map-site'
+ ⨯ Module not found: Error: Can't resolve 'next-flight-client-entry-loader' in '/Users/sheep/Desktop/interactive-map-site'
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 98ms
+ GET / 500 in 15ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 52ms
+ GET / 500 in 17ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 44ms
+ GET / 500 in 15ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 43ms
+ GET / 500 in 13ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 43ms
+ GET / 500 in 18ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 55ms
+ GET / 500 in 13ms
+ ⨯ Module not found: Error: Can't resolve 'next-flight-client-entry-loader' in '/Users/sheep/Desktop/interactive-map-site'
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 49ms
+ GET / 500 in 14ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 42ms
+ GET / 500 in 15ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 42ms
+ GET / 500 in 17ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 48ms
+ GET / 500 in 25ms
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: Cannot find module '@swc/helpers/package.json'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/create-compiler-aliases.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/webpack-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/router-server.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 156ms
+ GET / 500 in 29ms
+ ⨯ Module not found: Error: Can't resolve 'next-flight-client-entry-loader' in '/Users/sheep/Desktop/interactive-map-site'
+ ✓ Compiled in 1562ms (1394 modules)
+ ✓ Compiled in 33ms (629 modules)
+ ✓ Compiled /_not-found in 249ms (1375 modules)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/vendor-chunks/next.js'
+    at <unknown> (.next/server/app/_not-found/page.js:278:47)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:281:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/vendor-chunks/next.js'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 511ms (1722 modules)
+ GET / 500 in 1710ms
+ ⨯ Error: Cannot find module './vendor-chunks/gsap.js'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/.next/server/webpack-runtime.js
+- /Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/require.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/load-components.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/utils.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/options.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/index.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/next.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/page.js:443:47)
+    at Object.<anonymous> (.next/server/app/page.js:446:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ GET / 500 in 283ms
+ ⨯ Error: Cannot find module './vendor-chunks/gsap.js'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/.next/server/webpack-runtime.js
+- /Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/require.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/load-components.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/utils.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/options.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/index.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/next.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/page.js:443:47)
+    at Object.<anonymous> (.next/server/app/page.js:446:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ GET / 500 in 262ms
+ ⨯ Error: Cannot find module './vendor-chunks/gsap.js'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/.next/server/webpack-runtime.js
+- /Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/require.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/load-components.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/utils.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/options.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/index.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/next.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/page.js:443:47)
+    at Object.<anonymous> (.next/server/app/page.js:446:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ GET / 500 in 238ms
+ ⨯ Error: Cannot find module './vendor-chunks/gsap.js'
+Require stack:
+- /Users/sheep/Desktop/interactive-map-site/.next/server/webpack-runtime.js
+- /Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/require.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/load-components.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/utils.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/options.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/swc/index.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/config.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/next.js
+- /Users/sheep/Desktop/interactive-map-site/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/page.js:443:47)
+    at Object.<anonymous> (.next/server/app/page.js:446:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ GET / 500 in 234ms
+ ✓ Compiled in 146ms (1719 modules)
+ ✓ Compiled /_not-found in 163ms (953 modules)
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 1495ms
+ GET / 500 in 231ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 680ms
+ GET / 500 in 229ms
+ GET / 200 in 225ms
+ GET /characters/ponies.png 404 in 28ms
+ GET / 200 in 53ms
+ ✓ Compiled in 1278ms (1736 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 212ms
+ GET / 200 in 221ms
+ GET / 200 in 405ms
+ GET / 200 in 146ms
+ GET /characters/ponies.png 404 in 32ms
+ GET /characters/ponies.png 404 in 30ms
+ GET / 200 in 101ms
+ ✓ Compiled in 1166ms (1733 modules)
+ GET / 200 in 84ms
+ ✓ Compiled in 288ms (1733 modules)
+ GET / 200 in 148ms
+ ✓ Compiled /_not-found in 140ms (953 modules)
+ GET /characters/ponpon-characters.png 404 in 365ms
+ ✓ Compiled in 263ms (1736 modules)
+ GET / 200 in 66ms
+ GET / 200 in 153ms
+ GET /characters/ponpon-characters.png 404 in 40ms
+ ✓ Compiled in 387ms (1733 modules)
+ GET / 200 in 94ms
+ ✓ Compiled in 199ms (1733 modules)
+ GET / 200 in 55ms
+ ✓ Compiled in 197ms (1733 modules)
+ GET / 200 in 63ms
+ ✓ Compiled in 220ms (1733 modules)
+ GET / 200 in 38ms
+ GET / 200 in 145ms
+ GET / 200 in 60ms
+ GET / 200 in 38ms
+ ✓ Compiled /places/[slug] in 274ms (962 modules)
+ GET /places/horse-racing 200 in 724ms
+ GET /places/horse-racing 200 in 14ms
+ GET / 200 in 124ms
+ ✓ Compiled in 236ms (1745 modules)
+ GET / 200 in 73ms
+ ✓ Compiled in 195ms (1745 modules)
+ GET / 200 in 32ms
+ GET / 200 in 121ms
+ GET / 200 in 42ms
+ GET / 200 in 46ms
+ GET / 200 in 36ms
+ GET /places/dragon-boat 200 in 33ms
+ ✓ Compiled in 251ms (1745 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 187ms
+ GET / 200 in 190ms
+ GET /places/horse-racing 200 in 37ms
+ GET / 200 in 46ms
+ GET / 200 in 39ms
+ GET /places/basketball-court 200 in 28ms
+ GET /places/basketball-court 200 in 50ms
+ GET / 200 in 35ms
+ ✓ Compiled in 236ms (1745 modules)
+ GET / 200 in 78ms
+ GET / 200 in 13ms
+ ✓ Compiled in 221ms (1745 modules)
+ GET / 200 in 34ms
+ GET / 200 in 13ms
+ ✓ Compiled in 210ms (1745 modules)
+ GET / 200 in 37ms
+ GET / 200 in 10ms
+ GET /places/market-street 200 in 42ms
+ GET / 200 in 773ms
+ ✓ Compiled in 518ms (1745 modules)
+ GET / 200 in 69ms
+ ✓ Compiled in 534ms (1745 modules)
+ GET / 200 in 68ms
+ ✓ Compiled in 173ms (1745 modules)
+ GET / 200 in 30ms
+ ✓ Compiled in 221ms (1745 modules)
+ GET / 200 in 24ms
+ GET /places/horse-racing 200 in 58ms
+ GET /places/horse-racing 200 in 99ms
+ GET / 200 in 77ms
+ GET /places/market-street 200 in 28ms
+ GET / 200 in 44ms
+ GET /places/guilan-mountain 200 in 21ms
+ GET / 200 in 34ms
+ GET /places/flag-procession 200 in 28ms
+ GET / 200 in 36ms
+ GET /places/flag-procession 200 in 28ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 336ms (1745 modules)
+ GET /places/flag-procession 200 in 201ms
+ GET / 200 in 68ms
+ GET /places/market-street 200 in 29ms
+ GET / 200 in 94ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 850ms (1745 modules)
+ GET /places/market-street 200 in 407ms
+ GET / 200 in 94ms
+ GET / 200 in 47ms
+ GET /places/market-street 200 in 34ms
+ ✓ Compiled in 251ms (1745 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /places/market-street 200 in 122ms
+ GET / 200 in 76ms
+ ✓ Compiled in 185ms (1745 modules)
+ GET / 200 in 45ms
+ ✓ Compiled in 165ms (1745 modules)
+ GET / 200 in 25ms
+ ✓ Compiled in 314ms (1745 modules)
+ GET / 200 in 50ms
+ ✓ Compiled in 163ms (1745 modules)
+ GET / 200 in 53ms
+ ✓ Compiled in 200ms (1745 modules)
+ GET / 200 in 37ms
+ GET / 200 in 113ms
+ ✓ Compiled /_not-found in 154ms (965 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 674ms
+ GET / 500 in 233ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 1327ms
+ GET / 500 in 237ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js',
+  page: '/places/market-street'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js',
+  page: '/places/market-street'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET /places/market-street 500 in 745ms
+ GET /places/market-street 500 in 253ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js',
+  page: '/places/market-street'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/places/[slug]/page.js',
+  page: '/places/market-street'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET /places/market-street 500 in 717ms
+ GET /places/market-street 500 in 241ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 510ms
+ GET / 500 in 245ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 503ms
+ GET / 500 in 243ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 527ms
+ GET / 500 in 247ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 511ms
+ GET / 500 in 239ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 559ms
+ GET / 500 in 235ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 493ms
+ GET / 500 in 232ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 501ms
+ GET / 500 in 247ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+ GET / 500 in 509ms
+ GET / 500 in 255ms
+ ✓ Compiled in 690ms (1745 modules)
+ ✓ Compiled /_not-found in 90ms (965 modules)
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+ ⨯ [Error [InvariantError]: Invariant: Expected clientReferenceManifest to be defined. This is a bug in Next.js.]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 553ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 293ms
+ GET / 500 in 15ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 296ms
+ GET / 500 in 25ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 284ms
+ GET / 500 in 15ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 287ms
+ GET / 500 in 18ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 289ms
+ GET / 500 in 19ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 283ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 302ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/app/page.js',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/sheep/Desktop/interactive-map-site/.next/server/pages/_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 286ms
+ GET / 500 in 17ms
+ ✓ Compiled in 446ms (1745 modules)
+ ✓ Compiled in 160ms (1745 modules)
+ ✓ Compiled in 210ms (1745 modules)
+ ✓ Compiled in 161ms (1745 modules)
+ ✓ Compiled in 172ms (1745 modules)
+ ✓ Compiled in 423ms (1745 modules)
+ ✓ Compiled in 168ms (1745 modules)
+ ✓ Compiled in 222ms (1745 modules)
+ ✓ Compiled in 153ms (1745 modules)
+ ✓ Compiled in 194ms (1745 modules)
+ ✓ Compiled in 265ms (1745 modules)
+ ✓ Compiled in 383ms (1745 modules)
+ GET / 200 in 168ms
+ ⚠ Cross origin request detected from 172.17.108.253 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /_not-found in 112ms (965 modules)
+ GET /festival_assets_png/banner_07_blue.png 404 in 210ms
+ GET /festival_assets_png/horse_side.png 404 in 208ms
+ GET / 200 in 25ms
+ GET /festival_assets_png/banner_02_pink.png 404 in 94ms
+ GET /festival_assets_png/horse_front.png 404 in 93ms
+ GET /festival_assets_png/banner_11_green.png 404 in 44ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 44ms
+ GET /festival_assets_png/horse_side.png 404 in 44ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 52ms
+ GET /festival_assets_png/banner_09_green.png 404 in 50ms
+ GET /festival_assets_png/banner_10_green.png 404 in 46ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 50ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 47ms
+ GET /festival_assets_png/banner_10_green.png 404 in 45ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 61ms
+ GET /festival_assets_png/banner_09_green.png 404 in 58ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 50ms
+ GET /festival_assets_png/banner_09_green.png 404 in 47ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 48ms
+ GET /festival_assets_png/banner_10_green.png 404 in 49ms
+ GET /festival_assets_png/banner_11_green.png 404 in 46ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 49ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 34ms
+ GET /festival_assets_png/banner_11_green.png 404 in 37ms
+ GET / 200 in 74ms
+ GET /festival_assets_png/horse_side.png 404 in 45ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 46ms
+ GET / 200 in 30ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 48ms
+ GET /festival_assets_png/horse_side.png 404 in 47ms
+ GET /festival_assets_png/banner_02_pink.png 404 in 44ms
+ GET /festival_assets_png/horse_front.png 404 in 46ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 26ms
+ GET /festival_assets_png/horse_side.png 404 in 26ms
+ GET /festival_assets_png/banner_11_green.png 404 in 31ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_10_green.png 404 in 18ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 16ms
+ GET /festival_assets_png/banner_10_green.png 404 in 14ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 19ms
+ GET /festival_assets_png/banner_10_green.png 404 in 11ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 31ms
+ GET /festival_assets_png/banner_10_green.png 404 in 18ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_11_green.png 404 in 20ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_10_green.png 404 in 31ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 18ms
+ GET /festival_assets_png/banner_10_green.png 404 in 29ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 19ms
+ GET /festival_assets_png/banner_11_green.png 404 in 15ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 12ms
+ GET /festival_assets_png/banner_10_green.png 404 in 13ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/banner_10_green.png 404 in 13ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_10_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_09_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 18ms
+ GET /festival_assets_png/banner_10_green.png 404 in 31ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 16ms
+ GET /festival_assets_png/banner_10_green.png 404 in 19ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/banner_10_green.png 404 in 15ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/banner_11_green.png 404 in 15ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/horse_front.png 404 in 33ms
+ GET /festival_assets_png/banner_02_pink.png 404 in 34ms
+ GET /festival_assets_png/banner_10_green.png 404 in 80ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 79ms
+ GET /festival_assets_png/horse_side.png 404 in 77ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/banner_09_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_09_green.png 404 in 33ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 19ms
+ GET /festival_assets_png/banner_10_green.png 404 in 20ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_11_green.png 404 in 18ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 15ms
+ GET /festival_assets_png/banner_02_pink.png 404 in 24ms
+ GET /festival_assets_png/horse_front.png 404 in 24ms
+ GET /festival_assets_png/horse_side.png 404 in 38ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 39ms
+ GET /festival_assets_png/banner_09_green.png 404 in 39ms
+ GET /festival_assets_png/banner_10_green.png 404 in 14ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 12ms
+ GET /festival_assets_png/banner_11_green.png 404 in 15ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_10_green.png 404 in 14ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 12ms
+ GET /festival_assets_png/banner_10_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 20ms
+ GET /festival_assets_png/banner_11_green.png 404 in 26ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 13ms
+ GET /festival_assets_png/banner_10_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_10_green.png 404 in 14ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_10_green.png 404 in 31ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 16ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 14ms
+ GET /festival_assets_png/banner_09_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 19ms
+ GET /festival_assets_png/banner_11_green.png 404 in 11ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 13ms
+ GET /festival_assets_png/banner_09_green.png 404 in 10ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 10ms
+ GET /festival_assets_png/banner_10_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 12ms
+ GET /festival_assets_png/banner_11_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 11ms
+ GET /festival_assets_png/banner_11_green.png 404 in 12ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 41ms
+ GET /festival_assets_png/banner_09_green.png 404 in 18ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 17ms
+ GET /festival_assets_png/banner_11_green.png 404 in 31ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 30ms
+ GET /festival_assets_png/banner_09_green.png 404 in 19ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 18ms
+ GET /festival_assets_png/banner_10_green.png 404 in 39ms
+ GET /festival_assets_png/banner_09_green.png 404 in 21ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 32ms
+ GET /festival_assets_png/banner_10_green.png 404 in 34ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 23ms
+ GET /festival_assets_png/banner_09_green.png 404 in 32ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 24ms
+ GET /festival_assets_png/banner_09_green.png 404 in 34ms
+ GET /festival_assets_png/banner_07_blue.png 404 in 21ms
+ ✓ Compiled in 285ms (1748 modules)
+ GET / 200 in 73ms
+ GET / 200 in 7ms
+ ✓ Compiled in 415ms (1745 modules)
+ GET / 200 in 87ms
+ ✓ Compiled in 197ms (1745 modules)
+ GET / 200 in 57ms
+ ✓ Compiled in 479ms (1745 modules)
+ GET / 200 in 29ms
+ GET / 200 in 155ms
+ GET / 200 in 44ms
+ GET / 200 in 45ms
+ GET / 200 in 51ms
+ GET / 200 in 41ms
+ GET / 200 in 41ms
+ GET / 200 in 41ms
+ GET / 200 in 39ms

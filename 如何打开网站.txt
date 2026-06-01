@@ -1,0 +1,16 @@
+【Next.js 完整版 — 含开屏 + 互动地图】
+
+1. 双击「启动网站.command」
+   或终端：
+     cd ~/Desktop/interactive-map-site
+     npm install
+     npm run dev
+
+2. 打开 http://localhost:3000
+
+流程：
+  加载动画 → 开屏（三匹小马 + 鼠标互动）→ 点击进入 → 互动地图
+
+【注意】
+- 不要打开 static-legacy 或 preview.html
+- 必须 npm run dev，不要双击 html 文件
