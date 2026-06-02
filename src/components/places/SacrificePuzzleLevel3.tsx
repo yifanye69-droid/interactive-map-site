@@ -85,9 +85,8 @@ export function SacrificePuzzleLevel3() {
   const boardRef = useRef<HTMLDivElement>(null);
 
   const handleNextLevel = useCallback(() => {
-    // 第三关完成后，先回到归兰山封面页（后续如有新需求可改为“通关页”）
-    router.push("/places/guilan-mountain");
-  }, [router]);
+  router.push("/?view=map&hotspot=guilan-mountain");
+}, [router]);
 
   const isComplete = pieces.every((p) => p.locked);
 
@@ -264,21 +263,21 @@ export function SacrificePuzzleLevel3() {
         {showPopup && (
           <div className="puzzle-popup-overlay">
             <div className="puzzle-popup-window">
-              <Image
-                src="/places/Popup Window 1.png"
-                alt="拼图完成"
-                className="puzzle-popup-window__img"
-                width={2563}
-                height={2303}
-                sizes="(max-width: 768px) 78vw, 520px"
-                priority
-              />
-              <button
-                type="button"
-                className="puzzle-popup-window__next"
-                onClick={handleNextLevel}
-                aria-label="下一关"
-              />
+             <Image
+  src="/places/Popup Window 3.png"
+  alt="拼图完成"
+  className="puzzle-popup-window__img"
+  width={2563}
+  height={2303}
+  sizes="(max-width: 768px) 78vw, 520px"
+  priority
+/>
+<button
+  type="button"
+  className="puzzle-popup-window__next"
+  onClick={handleNextLevel}
+  aria-label="回到地图"
+/>
             </div>
           </div>
         )}
