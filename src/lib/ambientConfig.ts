@@ -47,4 +47,4 @@ export const ambientObjects: AmbientObject[] = [
   { id: "sp2", kind: "sparkle", x: 78, y: 38, depth: 0.86, duration: 3.5 },
 ];
 
-export const easterEggs = [];
+export const easterEggs: { id: string; x: number; y: number; emoji: string; label?: string }[] = [];
