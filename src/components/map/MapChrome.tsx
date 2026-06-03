@@ -32,7 +32,9 @@ export function MapChrome({ onZoomIn, onZoomOut, onReset, onHome }: MapChromePro
     }),
   };
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+  const currentUrl = typeof window !== "undefined"
+    ? (window.location.href.startsWith('http') ? window.location.href : `https://${window.location.href}`)
+    : "";
 
   return (
     <>
