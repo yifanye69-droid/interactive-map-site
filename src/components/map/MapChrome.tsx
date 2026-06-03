@@ -33,8 +33,8 @@ export function MapChrome({ onZoomIn, onZoomOut, onReset, onHome }: MapChromePro
   };
 
   const currentUrl = typeof window !== "undefined"
-    ? (window.location.hostname === 'yifanye69-droid.github.io'
-      ? 'https://yifanye69-droid.github.io/interactive-map-site/'
+    ? (window.location.hostname === 'shiny-biscotti-867f67.netlify.app'
+      ? 'https://shiny-biscotti-867f67.netlify.app/'
       : window.location.href)
     : "";
 
