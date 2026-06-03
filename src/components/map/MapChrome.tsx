@@ -32,9 +32,7 @@ export function MapChrome({ onZoomIn, onZoomOut, onReset, onHome }: MapChromePro
     }),
   };
 
-  const currentUrl = typeof window !== "undefined"
-    ? window.location.href
-    : "";
+  const currentUrl = "https://shiny-biscotti-867f67.netlify.app/";
 
   return (
     <>
