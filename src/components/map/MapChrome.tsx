@@ -33,7 +33,9 @@ export function MapChrome({ onZoomIn, onZoomOut, onReset, onHome }: MapChromePro
   };
 
   const currentUrl = typeof window !== "undefined"
-    ? window.location.href
+    ? (window.location.hostname === 'yifanye69-droid.github.io'
+      ? 'https://yifanye69-droid.github.io/interactive-map-site/'
+      : window.location.href)
     : "";
 
   return (
