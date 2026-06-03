@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   basePath: '/interactive-map-site',
   assetPrefix: '/interactive-map-site',
+  trailingSlash: true,
 };
 
 export default nextConfig;
