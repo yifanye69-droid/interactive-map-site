@@ -14,7 +14,9 @@ export function HotspotDetailModal({ hotspot, onClose }: HotspotDetailModalProps
   const ctaLabel = hotspot.ctaLabel ?? "了解更多";
 
   const handleCta = () => {
-    router.push(hotspot.route);
+    if (hotspot.route) {
+      router.push(hotspot.route);
+    }
   };
 
   return (
