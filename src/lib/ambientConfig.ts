@@ -47,10 +47,4 @@ export const ambientObjects: AmbientObject[] = [
   { id: "sp2", kind: "sparkle", x: 78, y: 38, depth: 0.86, duration: 3.5 },
 ];
 
-export const easterEggs = [
-  { id: "egg-sleep", emoji: "😴", x: 14, y: 24, label: "打盹的居民" },
-  { id: "egg-food", emoji: "🍜", x: 50, y: 74, label: "开饭啦" },
-  { id: "egg-rainbow", emoji: "🌈", x: 5, y: 12, label: "" },
-  { id: "egg-monster", emoji: "👾", x: 92, y: 8, label: "" },
-  { id: "egg-fountain", emoji: "⛲", x: 70, y: 45, label: "" },
-];
+export const easterEggs = [];

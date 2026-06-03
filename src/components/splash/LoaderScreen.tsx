@@ -39,12 +39,8 @@ export function LoaderScreen({ onComplete }: LoaderScreenProps) {
         animate={{ y: [0, -12, 0], rotate: [-2, 2, -2] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <span className="loader-screen__emoji" aria-hidden>
-          🎪
-        </span>
+        <img src="/ba1.gif" alt="" className="loader-screen__gif" />
       </motion.div>
-      <h2 className="loader-screen__title">节庆岛屿</h2>
-      <p className="loader-screen__sub">正在唤醒互动世界…</p>
       <div className="loader-screen__bar">
         <motion.div
           className="loader-screen__bar-fill"
@@ -52,22 +48,7 @@ export function LoaderScreen({ onComplete }: LoaderScreenProps) {
           layout
         />
       </div>
-      <p className="loader-screen__pct">{progress}%</p>
-      <div className="loader-screen__dots">
-        {[0, 1, 2].map((i) => (
-          <motion.span
-            key={i}
-            className="loader-screen__dot"
-            animate={{ y: [0, -10, 0], opacity: [0.4, 1, 0.4] }}
-            transition={{
-              duration: 0.9,
-              repeat: Infinity,
-              delay: i * 0.15,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
+      <img src="/xiuxiuxiu.png" alt="节庆岛屿" className="loader-screen__title-img" />
     </motion.div>
   );
 }

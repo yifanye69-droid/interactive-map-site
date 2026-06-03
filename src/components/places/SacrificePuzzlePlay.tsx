@@ -177,51 +177,52 @@ export function SacrificePuzzlePlay() {
   }, []);
 
   return (
-    <main className="puzzle-play-page">
-      <div className="puzzle-play-stage">
-        {/* Water script background decoration */}
-        <div className="puzzle-water-script">
-          <Image
-            src="/places/Water Script 1.png"
-            alt="水书背景"
-            fill
-            className="puzzle-water-script__img"
-            sizes="100vw"
-            priority
-          />
-        </div>
+    <>
+      <main className="puzzle-play-page">
+        <div className="puzzle-play-stage">
+          {/* Water script background decoration */}
+          <div className="puzzle-water-script">
+            <Image
+              src="/places/Water Script 1.png"
+              alt="水书背景"
+              fill
+              className="puzzle-water-script__img"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
-        {/* Title and description */}
-        <div className="puzzle-header">
-          <h1 className="puzzle-title">祭祀大典拼一拼（1/3）</h1>
-          <p className="puzzle-description">
-            祭祀大典是水族文化中最重要的仪式之一，通过拼图的方式，
-            让我们了解祭祀大典的流程和意义，将散落的拼图拼合，
-            就能激活祭祀大典的场景。
-          </p>
-        </div>
+          {/* Title and description */}
+          <div className="puzzle-header">
+            <h1 className="puzzle-title">祭祀大典拼一拼（1/3）</h1>
+            <p className="puzzle-description">
+              祭祀大典是水族文化中最重要的仪式之一，通过拼图的方式，
+              让我们了解祭祀大典的流程和意义，将散落的拼图拼合，
+              就能激活祭祀大典的场景。
+            </p>
+          </div>
 
-        {/* Puzzle board area */}
-        <div className="puzzle-board-container" ref={boardRef}>
-          <div className="puzzle-board-border">
-            <div className="puzzle-board-inner">
-              {/* Puzzle pieces */}
-              {PUZZLE_PIECES.map((config) => {
-                const piece = pieces.find((p) => p.id === config.id)!;
-                const isDragging = draggingId === config.id;
+          {/* Puzzle board area */}
+          <div className="puzzle-board-container" ref={boardRef}>
+            <div className="puzzle-board-border">
+              <div className="puzzle-board-inner">
+                {/* Puzzle pieces */}
+                {PUZZLE_PIECES.map((config) => {
+                  const piece = pieces.find((p) => p.id === config.id)!;
+                  const isDragging = draggingId === config.id;
 
-                return (
-                  <div
-                    key={config.id}
-                    className={[
-                      "puzzle-piece",
-                      piece.locked ? "puzzle-piece--locked" : "",
-                      isDragging ? "puzzle-piece--dragging" : "",
-                    ].filter(Boolean).join(" ")}
-                    style={{
-                      left: piece.x,
-                      top: piece.y,
-                      width: config.width,
+                  return (
+                    <div
+                      key={config.id}
+                      className={[
+                        "puzzle-piece",
+                        piece.locked ? "puzzle-piece--locked" : "",
+                        isDragging ? "puzzle-piece--dragging" : "",
+                      ].filter(Boolean).join(" ")}
+                      style={{
+                        left: piece.x,
+                        top: piece.y,
+                        width: config.width,
                       height: config.height,
                       zIndex: isDragging ? 999 : piece.z,
                     }}
@@ -262,29 +263,6 @@ export function SacrificePuzzlePlay() {
         >
           完成
         </button>
-
-        {/* Popup Window */}
-        {showPopup && (
-          <div className="puzzle-popup-overlay">
-            <div className="puzzle-popup-window">
-              <Image
-                src="/places/Popup Window 1.png"
-                alt="拼图完成"
-                className="puzzle-popup-window__img"
-                width={2563}
-                height={2303}
-                sizes="(max-width: 768px) 78vw, 520px"
-                priority
-              />
-              <button
-                type="button"
-                className="puzzle-popup-window__next"
-                onClick={handleNextLevel}
-                aria-label="下一关"
-              />
-            </div>
-          </div>
-        )}
       </div>
 
       <Link
@@ -295,5 +273,29 @@ export function SacrificePuzzlePlay() {
         ←
       </Link>
     </main>
+
+    {/* Popup Window */}
+    {showPopup && (
+      <div className="puzzle-popup-overlay">
+        <div className="puzzle-popup-window">
+          <Image
+            src="/places/Popup Window 1.png"
+            alt="拼图完成"
+            className="puzzle-popup-window__img"
+            width={2563}
+            height={2303}
+            sizes="(max-width: 768px) 78vw, 520px"
+            priority
+          />
+          <button
+            type="button"
+            className="puzzle-popup-window__next"
+            onClick={handleNextLevel}
+            aria-label="下一关"
+          />
+        </div>
+      </div>
+    )}
+    </>
   );
 }

@@ -8,10 +8,14 @@ export interface Hotspot {
   y: number;
   /** 热点可点击区域半径（相对地图宽度的百分比） */
   radius?: number;
-  route: string;
+  route?: string;
   icon?: string;
   /** 弹窗主按钮文案，默认「了解更多」 */
   ctaLabel?: string;
+  /** 是否为视频热点 */
+  isVideo?: boolean;
+  /** 是否为特殊热点（有特殊动效） */
+  isSpecial?: boolean;
 }
 
 export interface MapConfig {

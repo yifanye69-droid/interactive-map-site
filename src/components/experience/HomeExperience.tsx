@@ -15,14 +15,17 @@ import {
 
 type Phase = "load" | "splash" | "map";
 
-function resolveInitialPhase(): Phase {
-  if (typeof window === "undefined") return "load";
-  return shouldStartOnMap() ? "map" : "load";
-}
-
 export function HomeExperience() {
   const searchParams = useSearchParams();
-  const [phase, setPhase] = useState<Phase>(resolveInitialPhase);
+  const [phase, setPhase] = useState<Phase>("load");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (shouldStartOnMap()) {
+      setPhase("map");
+    }
+  }, []);
 
   useEffect(() => {
     const view = searchParams.get("view");
@@ -39,10 +42,10 @@ export function HomeExperience() {
   }, [searchParams]);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem(MAP_SKIP_INTRO_KEY) === "1") {
+    if (mounted && sessionStorage.getItem(MAP_SKIP_INTRO_KEY) === "1") {
       setPhase("map");
     }
-  }, []);
+  }, [mounted]);
 
   const enterMap = useCallback(() => {
     markMapIntroSkipped();

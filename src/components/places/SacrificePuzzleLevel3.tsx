@@ -177,51 +177,52 @@ export function SacrificePuzzleLevel3() {
   }, []);
 
   return (
-    <main className="puzzle-play-page">
-      <div className="puzzle-play-stage">
-        {/* Water script background decoration */}
-        <div className="puzzle-water-script">
-          <Image
-            src="/places/Water Script 1.png"
-            alt="水书背景"
-            fill
-            className="puzzle-water-script__img"
-            sizes="100vw"
-            priority
-          />
-        </div>
+    <>
+      <main className="puzzle-play-page">
+        <div className="puzzle-play-stage">
+          {/* Water script background decoration */}
+          <div className="puzzle-water-script">
+            <Image
+              src="/places/Water Script 1.png"
+              alt="水书背景"
+              fill
+              className="puzzle-water-script__img"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
-        {/* Title and description */}
-        <div className="puzzle-header">
-          <h1 className="puzzle-title">祭祀大典拼一拼（3/3）</h1>
-          <p className="puzzle-description">继续探索水族文化，完成第三关拼图挑战。</p>
-        </div>
+          {/* Title and description */}
+          <div className="puzzle-header">
+            <h1 className="puzzle-title">祭祀大典拼一拼（3/3）</h1>
+            <p className="puzzle-description">继续探索水族文化，完成第三关拼图挑战。</p>
+          </div>
 
-        {/* Puzzle board area */}
-        <div className="puzzle-board-container" ref={boardRef}>
-          <div className="puzzle-board-border">
-            <div className="puzzle-board-inner">
-              {/* Puzzle pieces */}
-              {PUZZLE_PIECES.map((config) => {
-                const piece = pieces.find((p) => p.id === config.id)!;
-                const isDragging = draggingId === config.id;
+          {/* Puzzle board area */}
+          <div className="puzzle-board-container" ref={boardRef}>
+            <div className="puzzle-board-border">
+              <div className="puzzle-board-inner">
+                {/* Puzzle pieces */}
+                {PUZZLE_PIECES.map((config) => {
+                  const piece = pieces.find((p) => p.id === config.id)!;
+                  const isDragging = draggingId === config.id;
 
-                return (
-                  <div
-                    key={config.id}
-                    className={[
-                      "puzzle-piece",
-                      piece.locked ? "puzzle-piece--locked" : "",
-                      isDragging ? "puzzle-piece--dragging" : "",
-                    ]
-                      .filter(Boolean)
-                      .join(" ")}
-                    style={{
-                      left: piece.x,
-                      top: piece.y,
-                      width: config.width,
-                      height: config.height,
-                      zIndex: isDragging ? 999 : piece.z,
+                  return (
+                    <div
+                      key={config.id}
+                      className={[
+                        "puzzle-piece",
+                        piece.locked ? "puzzle-piece--locked" : "",
+                        isDragging ? "puzzle-piece--dragging" : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      style={{
+                        left: piece.x,
+                        top: piece.y,
+                        width: config.width,
+                        height: config.height,
+                        zIndex: isDragging ? 999 : piece.z,
                     }}
                     onPointerDown={(e) => handlePointerDown(config.id, e)}
                     onPointerMove={handlePointerMove}
@@ -259,34 +260,35 @@ export function SacrificePuzzleLevel3() {
         >
           完成
         </button>
-
-        {/* Popup Window */}
-        {showPopup && (
-          <div className="puzzle-popup-overlay">
-            <div className="puzzle-popup-window">
-              <Image
-                src="/places/Popup Window 1.png"
-                alt="拼图完成"
-                className="puzzle-popup-window__img"
-                width={2563}
-                height={2303}
-                sizes="(max-width: 768px) 78vw, 520px"
-                priority
-              />
-              <button
-                type="button"
-                className="puzzle-popup-window__next"
-                onClick={handleNextLevel}
-                aria-label="下一关"
-              />
-            </div>
-          </div>
-        )}
       </div>
 
       <Link href="/places/guilan-mountain" className="puzzle-play-page__back" aria-label="返回封面">
         ←
       </Link>
     </main>
+
+    {/* Popup Window */}
+    {showPopup && (
+      <div className="puzzle-popup-overlay">
+        <div className="puzzle-popup-window">
+          <Image
+            src="/places/Popup Window 1.png"
+            alt="拼图完成"
+            className="puzzle-popup-window__img"
+            width={2563}
+            height={2303}
+            sizes="(max-width: 768px) 78vw, 520px"
+            priority
+          />
+          <button
+            type="button"
+            className="puzzle-popup-window__next"
+            onClick={handleNextLevel}
+            aria-label="下一关"
+          />
+        </div>
+      </div>
+    )}
+    </>
   );
 }

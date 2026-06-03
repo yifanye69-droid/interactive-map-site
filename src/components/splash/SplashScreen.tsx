@@ -18,31 +18,38 @@ const RANDOM_BANNERS = [
 ];
 const HORSE_1 = `${ASSET_BASE}/horse1.png`;
 const HORSE_2 = `${ASSET_BASE}/horse2.png`;
-const SPECIAL_INDEX = 14;
+const SPECIAL_INDEX = 20;
+const METEOR_COLORS = ["#fff5d6", "#ffeaa7", "#ffd93d", "#ffec8b", "#fff9e6", "#ff9ec7", "#b8e4ff"];
 
 const BANNERS = [
-  { x: 0, y: 42, h: 55, z: 8, special: false },
-  { x: 6, y: 40, h: 65, z: 10, special: false },
-  { x: 12, y: 45, h: 70, z: 13, special: false },
-  { x: 18, y: 43, h: 60, z: 11, special: false },
-  { x: 24, y: 40, h: 66, z: 9, special: false },
-  { x: 30, y: 43, h: 59, z: 12, special: false },
-  { x: 36, y: 40, h: 63, z: 10, special: false },
-  { x: 42, y: 37, h: 74, z: 14, special: false },
-  { x: 48, y: 43, h: 61, z: 9, special: false },
-  { x: 54, y: 43, h: 68, z: 12, special: false },
-  { x: 60, y: 41, h: 58, z: 10, special: false },
-  { x: 66, y: 44, h: 54, z: 8, special: false },
-  { x: 72, y: 43, h: 61, z: 15, special: false },
-  { x: 78, y: 45, h: 56, z: 9, special: false },
-  { x: 55, y: 38, h: 75, z: 22, special: true },
-  { x: 84, y: 45, h: 63, z: 16, special: false },
-  { x: 90, y: 41, h: 62, z: 11, special: false },
-  { x: 96, y: 38, h: 72, z: 12, special: false },
-  { x: 102, y: 43, h: 60, z: 10, special: false },
-  { x: 108, y: 41, h: 66, z: 11, special: false },
-  { x: 114, y: 42, h: 64, z: 9, special: false },
-  { x: 120, y: 45, h: 57, z: 8, special: false },
+  { x: 5, y: 5, h: 55, z: 8, special: false },
+  { x: 8, y: 5, h: 62, z: 10, special: false },
+  { x: 11, y: 5, h: 58, z: 22, special: false },
+  { x: 14, y: 5, h: 65, z: 11, special: false },
+  { x: 17, y: 5, h: 52, z: 9, special: false },
+  { x: 20, y: 5, h: 60, z: 12, special: false },
+  { x: 23, y: 5, h: 55, z: 10, special: false },
+  { x: 26, y: 5, h: 68, z: 14, special: false },
+  { x: 29, y: 5, h: 50, z: 9, special: false },
+  { x: 32, y: 5, h: 57, z: 8, special: false },
+  { x: 35, y: 5, h: 63, z: 10, special: false },
+  { x: 38, y: 5, h: 54, z: 11, special: false },
+  { x: 41, y: 5, h: 59, z: 9, special: false },
+  { x: 44, y: 5, h: 66, z: 8, special: false },
+  { x: 47, y: 5, h: 53, z: 10, special: false },
+  { x: 50, y: 5, h: 61, z: 11, special: false },
+  { x: 53, y: 5, h: 56, z: 9, special: false },
+  { x: 56, y: 5, h: 64, z: 10, special: false },
+  { x: 59, y: 5, h: 51, z: 8, special: false },
+  { x: 62, y: 5, h: 58, z: 9, special: false },
+  { x: 60, y: 5, h: 67, z: 22, special: true },
+  { x: 63, y: 5, h: 55, z: 11, special: false },
+  { x: 66, y: 5, h: 62, z: 8, special: false },
+  { x: 69, y: 5, h: 52, z: 9, special: false },
+  { x: 72, y: 5, h: 59, z: 10, special: false },
+  { x: 75, y: 5, h: 65, z: 11, special: false },
+  { x: 78, y: 5, h: 54, z: 8, special: false },
+  { x: 81, y: 5, h: 60, z: 9, special: false },
 ] as const;
 
 const AMBIENT_FIREWORKS = [
@@ -63,18 +70,33 @@ const AMBIENT_FIREWORKS = [
 export function SplashScreen({ onEnter }: SplashScreenProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
   const horseRef = useRef<HTMLImageElement>(null);
   const [hoveredBanner, setHoveredBanner] = useState<number | null>(null);
-  const [burstFireworks, setBurstFireworks] = useState<{ id: number; x: number; y: number; color: string }[]>([]);
+  const [burstFireworks, setBurstFireworks] = useState<{ id: number; x: number; y: number; color: string; age: number }[]>([]);
   const [randomBannerSrc, setRandomBannerSrc] = useState<Record<number, string>>({});
+  const [isWarpSpeed, setIsWarpSpeed] = useState(false);
+  const lastFireworkTime = useRef<number>(0);
+  const lastMousePos = useRef<{ x: number; y: number } | null>(null);
 
   const ambientDots = useMemo(
-    () => Array.from({ length: 90 }, (_, index) => ({
-      id: index,
-      x: (index * 37) % 100,
-      y: (index * 53) % 100,
-      color: ["#4da8ff", "#ff7aa2", "#f5c84c", "#9b7ce2", "#73d2a6"][index % 5],
-    })),
+    () => Array.from({ length: 1000 }, (_, index) => {
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 100 + Math.random() * 200;
+      const startX = Math.cos(angle) * distance;
+      const startY = Math.sin(angle) * distance;
+      return {
+        id: index,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: 12 + Math.random() * 12,
+        color: Math.random() > 0.85 ? ["#ff9ec7", "#b8e4ff", "#7ee8b5"][Math.floor(Math.random() * 3)] : ["#fff5d6", "#ffeaa7", "#ffd93d", "#ffec8b", "#fff9e6", "#ffffcc"][Math.floor(Math.random() * 6)],
+        speed: 1 + Math.random() * 2,
+        delay: Math.random() * 6,
+        startX,
+        startY,
+      };
+    }),
     []
   );
 
@@ -99,25 +121,29 @@ export function SplashScreen({ onEnter }: SplashScreenProps) {
   }, []);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setBurstFireworks((previous) =>
+        previous
+          .map((fw) => ({ ...fw, age: fw.age + 1 }))
+          .filter((fw) => fw.age < 20)
+      );
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     const onMove = (event: MouseEvent | TouchEvent) => {
       const el = containerRef.current;
-      if (!el || !sceneRef.current || !horseRef.current) return;
+      if (!el || !bgRef.current) return;
       const rect = el.getBoundingClientRect();
       const point = "touches" in event && event.touches[0] ? event.touches[0] : event as MouseEvent;
       const x = point.clientX - rect.left - rect.width / 2;
       const y = point.clientY - rect.top - rect.height / 2;
 
-      gsap.to(sceneRef.current, {
+      gsap.to(bgRef.current, {
         x: x * 0.018,
         y: y * 0.018,
-        rotateY: x * 0.008,
-        rotateX: -y * 0.006,
-        duration: 0.55,
-        ease: "power2.out",
-      });
-      gsap.to(horseRef.current, {
-        x: x * 0.008,
-        y: y * 0.006,
+        rotate: x * 0.015,
         duration: 0.55,
         ease: "power2.out",
       });
@@ -133,29 +159,51 @@ export function SplashScreen({ onEnter }: SplashScreenProps) {
 
   const handleHover = useCallback((index: number | null) => {
     setHoveredBanner(index);
-    if (index !== null && index !== SPECIAL_INDEX) {
+    if (index !== null && index !== SPECIAL_INDEX && !randomBannerSrc[index]) {
       setRandomBannerSrc((previous) => ({
         ...previous,
-        [index]: RANDOM_BANNERS[Math.floor(Math.random() * RANDOM_BANNERS.length)],
+        [index]: RANDOM_BANNERS[index % RANDOM_BANNERS.length],
       }));
+    }
+  }, [randomBannerSrc]);
+
+  const handleMouseMove = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
+    const now = Date.now();
+    if (now - lastFireworkTime.current < 80) return;
+    lastFireworkTime.current = now;
+
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (rect) {
+      const next = Array.from({ length: 8 }, (_, index) => ({
+        id: Date.now() + index,
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+        color: METEOR_COLORS[Math.floor(Math.random() * METEOR_COLORS.length)],
+        age: 0,
+      }));
+      setBurstFireworks((previous) => [...previous.slice(-50), ...next]);
+      window.setTimeout(() => {
+        setBurstFireworks((previous) => previous.filter((item) => !next.some((created) => created.id === item.id)));
+      }, 2000);
     }
   }, []);
 
   const handleClick = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     const rect = containerRef.current?.getBoundingClientRect();
     if (rect) {
-      const colors = ["#ff7d91", "#f4bf38", "#74c7ee", "#9b7ce2", "#73d2a6"];
       const next = Array.from({ length: 5 }, (_, index) => ({
         id: Date.now() + index,
-        x: event.clientX - rect.left + (index - 2) * 22,
-        y: event.clientY - rect.top + ((index % 2) - 0.5) * 22,
-        color: colors[(Date.now() + index) % colors.length],
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+        color: METEOR_COLORS[Math.floor(Math.random() * METEOR_COLORS.length)],
+        age: 0,
       }));
-      setBurstFireworks((previous) => [...previous.slice(-20), ...next]);
+      setBurstFireworks((previous) => [...previous.slice(-25), ...next]);
       window.setTimeout(() => {
         setBurstFireworks((previous) => previous.filter((item) => !next.some((created) => created.id === item.id)));
-      }, 1100);
+      }, 2000);
     }
+    setIsWarpSpeed((prev) => !prev);
   }, []);
 
   const enterMap = useCallback(() => {
@@ -169,14 +217,24 @@ export function SplashScreen({ onEnter }: SplashScreenProps) {
   }, [onEnter]);
 
   return (
-    <div ref={containerRef} className="splash-reference-screen" onClick={handleClick}>
+    <div ref={containerRef} className="splash-reference-screen" onClick={handleClick} onMouseMove={handleMouseMove}>
       <div ref={sceneRef} className="splash-reference-scene">
-        <div className="splash-reference-bg">
+        <div ref={bgRef} className={`splash-reference-bg ${isWarpSpeed ? 'warp-speed' : ''}`}>
           {ambientDots.map((dot) => (
             <span
               key={dot.id}
               className="splash-confetti-dot"
-              style={{ left: `${dot.x}%`, top: `${dot.y}%`, backgroundColor: dot.color }}
+              style={{
+                left: `${dot.x}%`,
+                top: `${dot.y}%`,
+                width: `${dot.size}px`,
+                height: `${dot.size}px`,
+                backgroundColor: dot.color,
+                '--warp-duration': `${dot.speed}s`,
+                animationDelay: `-${dot.delay}s`,
+                '--start-x': `${dot.startX}px`,
+                '--start-y': `${dot.startY}px`,
+              } as React.CSSProperties}
             />
           ))}
           {AMBIENT_FIREWORKS.map((firework, index) => (
@@ -232,13 +290,20 @@ export function SplashScreen({ onEnter }: SplashScreenProps) {
             alt=""
             draggable={false}
           />
+          <img src="/xiuxiuxiu.png" alt="XIUXIUXIU" className="splash-logo" />
+          <div className="splash-hint-text">找到令马转头的水书！</div>
         </div>
 
         {burstFireworks.map((firework) => (
           <span
             key={firework.id}
             className="splash-click-firework"
-            style={{ left: firework.x, top: firework.y, color: firework.color }}
+            style={{
+              left: firework.x,
+              top: firework.y,
+              color: firework.color,
+              '--age': firework.age,
+            } as React.CSSProperties}
           />
         ))}
       </div>

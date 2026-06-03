@@ -25,7 +25,7 @@ export function HotspotMarker({
   return (
     <div
       data-hotspot
-      className={`hotspot-marker ${active ? "is-active" : ""} ${nearbyActive ? "is-nearby" : ""}`}
+      className={`hotspot-marker ${active ? "is-active" : ""} ${nearbyActive ? "is-nearby" : ""} ${hotspot.isVideo || hotspot.isSpecial ? "is-video" : ""}`}
       style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
       onMouseEnter={() => onHover(hotspot.id)}
       onMouseLeave={() => onHover(null)}

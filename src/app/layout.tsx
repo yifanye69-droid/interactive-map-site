@@ -9,8 +9,11 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "节庆岛屿 · 互动插画宇宙",
+  title: "XIUXIUXIU-水族端节AI互动地图",
   description: "可探索的互动插画地图世界",
+  icons: {
+    icon: "/favicon.gif",
+  },
 };
 
 export const viewport: Viewport = {
