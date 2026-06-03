@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/interactive-map-site',
-  assetPrefix: '/interactive-map-site',
-  trailingSlash: true,
 };
 
 export default nextConfig;
